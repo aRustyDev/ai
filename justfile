@@ -19,3 +19,19 @@ cursor:
 
 mcp-tools:
     echo "TODO: Setup mcp-tools for repo"
+
+sitemap root:
+    echo "TODO: Generate sitemap for repo"
+    which("tree") -H '.' \
+            -L 1 \
+            --noreport \
+            --houtro "" \
+            --dirsfirst \
+            --charset utf-8 \
+            --ignore-case \
+            --timefmt '%d-%b-%Y %H:%M' \
+            -I "index.html" \
+            -T 'AI Contexts' \
+            -s -D \
+            -P "*.zip|*.gz" \
+            -o index.html
