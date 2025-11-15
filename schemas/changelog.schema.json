@@ -1,0 +1,62 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "project": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": ["name"]
+    },
+    "links": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": {
+        "properties": {
+          "project": {
+            "type": "array",
+            "uniqueItems": true,
+            "minItems": 1,
+            "items": { "$ref": "/schemas/markdown/permalink" }
+          },
+          "external": {
+            "type": "array",
+            "uniqueItems": true,
+            "minItems": 1,
+            "items": { "$ref": "/schemas/markdown/link" }
+          },
+          "private": {
+            "type": "array",
+            "uniqueItems": true,
+            "minItems": 1,
+            "items": { "$ref": "/schemas/markdown/link" }
+          }
+        }
+      }
+    },
+    "logs": {
+      "type": "object",
+      "properties": {
+        "unreleased": {
+          "$ref": "/schemas/changelog/release"
+        },
+        "releases": {
+          "type": "array",
+          "uniqueItems": true,
+          "minItems": 1,
+          "items": {
+            "$ref": "/schemas/changelog/release"
+          }
+        }
+      },
+      "required": ["unreleased", "releases"]
+    }
+  },
+  "required": ["project", "links", "logs"]
+}

@@ -1,0 +1,18 @@
+{
+  "$id": "/schemas/markdown/link",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "index": {
+      "type": "number"
+    },
+    "url": {
+      "type": "string"
+    },
+    "hint": {
+      "type": "string"
+    }
+  },
+  "required": ["index", "url", "hint"]
+}

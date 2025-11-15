@@ -1,0 +1,51 @@
+{
+  "$id": "/schemas/changelog/release",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "version": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "additions": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": { "$ref": "/schemas/changelog/entry" }
+    },
+    "changes": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": { "$ref": "/schemas/changelog/entry" }
+    },
+    "deprecations": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": { "$ref": "/schemas/changelog/entry" }
+    },
+    "removals": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": { "$ref": "/schemas/changelog/entry" }
+    },
+    "fixes": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": { "$ref": "/schemas/changelog/entry" }
+    },
+    "vulns": {
+      "type": "array",
+      "uniqueItems": true,
+      "minItems": 1,
+      "items": { "$ref": "/schemas/changelog/entry" }
+    }
+  },
+  "required": ["version", "date"]
+}

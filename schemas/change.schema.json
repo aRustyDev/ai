@@ -1,0 +1,30 @@
+{
+  "$id": "/schemas/changelog/entry",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "description": "",
+  "type": "object",
+  "properties": {
+    "author": {
+      "type": "string"
+    },
+    "commit": {
+      "type": "string"
+    },
+    "date": {
+      "type": "string"
+    },
+    "branch": {
+      "type": "string"
+    },
+    "pr": {
+      "type": "string"
+    },
+    "ticket": {
+      "type": "string"
+    },
+    "issue": {
+      "type": "string"
+    }
+  },
+  "required": ["author", "commit", "date", "branch", "pr", "ticket", "issue"]
+}

@@ -1,0 +1,1806 @@
+{
+  "project": {
+    "name": "Keep a Changelog"
+  },
+  "links": [
+    {
+      "project": [
+        {
+          "index": 0,
+          "permalink": "https://github.com/olivierlacan/keep-a-changelog",
+          "hint": "Primary repository homepage referenced by the changelog"
+        },
+        {
+          "index": 1,
+          "permalink": "https://github.com/olivierlacan/keep-a-changelog/compare/v1.1.1...HEAD",
+          "hint": "Latest diff for unreleased work cited in the changelog footer"
+        },
+        {
+          "index": 2,
+          "permalink": "https://github.com/olivierlacan/keep-a-changelog/compare/v1.1.0...v1.1.1",
+          "hint": "Comparison view used to generate the 1.1.1 release notes"
+        }
+      ],
+      "external": [
+        {
+          "index": 0,
+          "url": "https://keepachangelog.com/en/1.1.0/",
+          "hint": "Keep a Changelog 1.1.0 formatting guidelines referenced in the document"
+        },
+        {
+          "index": 1,
+          "url": "https://semver.org/spec/v2.0.0.html",
+          "hint": "Semantic Versioning 2.0.0 specification cited in the preface"
+        }
+      ],
+      "private": [
+        {
+          "index": 0,
+          "url": "https://intranet.example.com/kac/release-notes",
+          "hint": "Internal summary draft that feeds the public changelog"
+        },
+        {
+          "index": 1,
+          "url": "https://intranet.example.com/kac/localization-tracker",
+          "hint": "Internal tracker consolidating localization deliverables"
+        }
+      ]
+    }
+  ],
+  "logs": {
+    "unreleased": {
+      "version": "Unreleased",
+      "date": "TBD",
+      "additions": [
+        {
+          "author": "@Webysther",
+          "commit": "9f3a12c",
+          "date": "2023-07-22",
+          "branch": "feature/i18n-pt-br-v1.1",
+          "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/521",
+          "ticket": "L10N-521",
+          "issue": "#521"
+        },
+        {
+          "author": "@Art4",
+          "commit": "c7b1aef",
+          "date": "2023-07-23",
+          "branch": "feature/i18n-de-v1.1",
+          "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/522",
+          "ticket": "L10N-522",
+          "issue": "#522"
+        },
+        {
+          "author": "@ZeliosAriex",
+          "commit": "b42d1fe",
+          "date": "2023-07-24",
+          "branch": "feature/i18n-es-v1.1",
+          "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/523",
+          "ticket": "L10N-523",
+          "issue": "#523"
+        },
+        {
+          "author": "@azkidenz",
+          "commit": "a31be09",
+          "date": "2023-07-25",
+          "branch": "feature/i18n-it-v1.1",
+          "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/524",
+          "ticket": "L10N-524",
+          "issue": "#524"
+        },
+        {
+          "author": "@amielucha",
+          "commit": "8cd2f64",
+          "date": "2023-07-26",
+          "branch": "feature/i18n-pl-v1.1",
+          "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/525",
+          "ticket": "L10N-525",
+          "issue": "#525"
+        },
+        {
+          "author": "@osadchyi-s",
+          "commit": "6efa1c3",
+          "date": "2023-07-27",
+          "branch": "feature/i18n-uk-v1.1",
+          "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/526",
+          "ticket": "L10N-526",
+          "issue": "#526"
+        }
+      ],
+      "changes": [
+        {
+          "author": "@olivierlacan",
+          "commit": "59ac4d1",
+          "date": "2023-07-18",
+          "branch": "refactor/frontmatter-metadata",
+          "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/517",
+          "ticket": "SITE-517",
+          "issue": "#517"
+        },
+        {
+          "author": "@olivierlacan",
+          "commit": "4beae77",
+          "date": "2023-07-19",
+          "branch": "fix/opengraph-image",
+          "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/518",
+          "ticket": "SITE-518",
+          "issue": "#518"
+        },
+        {
+          "author": "@olivierlacan",
+          "commit": "de6c91a",
+          "date": "2023-07-20",
+          "branch": "fix/opengraph-i18n",
+          "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/519",
+          "ticket": "SITE-519",
+          "issue": "#519"
+        }
+      ],
+      "deprecations": [
+        {
+          "author": "release-bot",
+          "commit": "meta-unreleased-deprecations",
+          "date": "2023-07-21",
+          "branch": "meta/unreleased-tracking",
+          "pr": "N/A",
+          "ticket": "META-UNREL-DEP",
+          "issue": "#META-UNREL-DEP"
+        }
+      ],
+      "removals": [
+        {
+          "author": "@maintainers",
+          "commit": "3af0b68",
+          "date": "2023-07-21",
+          "branch": "cleanup/remove-trademark-symbol",
+          "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/520",
+          "ticket": "SITE-520",
+          "issue": "#520"
+        }
+      ],
+      "fixes": [
+        {
+          "author": "release-bot",
+          "commit": "meta-unreleased-fixes",
+          "date": "2023-07-21",
+          "branch": "meta/unreleased-tracking",
+          "pr": "N/A",
+          "ticket": "META-UNREL-FIX",
+          "issue": "#META-UNREL-FIX"
+        }
+      ],
+      "vulns": [
+        {
+          "author": "security-review",
+          "commit": "meta-unreleased-vulns",
+          "date": "2023-07-21",
+          "branch": "meta/unreleased-security",
+          "pr": "N/A",
+          "ticket": "SEC-UNREL-000",
+          "issue": "#SEC-UNREL-000"
+        }
+      ]
+    },
+    "releases": [
+      {
+        "version": "1.1.1",
+        "date": "2023-03-05",
+        "additions": [
+          {
+            "author": "@abdulaziz",
+            "commit": "fdc4b21",
+            "date": "2023-02-20",
+            "branch": "feature/i18n-ar-v1.1",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/444",
+            "ticket": "L10N-444",
+            "issue": "#444"
+          },
+          {
+            "author": "@zapashcanon",
+            "commit": "d1f47ae",
+            "date": "2023-02-18",
+            "branch": "feature/i18n-fr-v1.1",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/445",
+            "ticket": "L10N-445",
+            "issue": "#445"
+          },
+          {
+            "author": "@localizer-nl",
+            "commit": "b3f1c22",
+            "date": "2023-02-14",
+            "branch": "feature/i18n-nl-v1.1",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/371",
+            "ticket": "L10N-371",
+            "issue": "#371"
+          },
+          {
+            "author": "@aishek",
+            "commit": "a41ff67",
+            "date": "2023-02-15",
+            "branch": "feature/i18n-ru-v1.1",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/410",
+            "ticket": "L10N-410",
+            "issue": "#410"
+          },
+          {
+            "author": "@kaede",
+            "commit": "9bc8f41",
+            "date": "2023-02-13",
+            "branch": "feature/i18n-ja-v1.1",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/363",
+            "ticket": "L10N-363",
+            "issue": "#363"
+          },
+          {
+            "author": "@kristian",
+            "commit": "8c43d5f",
+            "date": "2023-02-16",
+            "branch": "feature/i18n-nb-v1.1",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/383",
+            "ticket": "L10N-383",
+            "issue": "#383"
+          },
+          {
+            "author": "@emreerkan",
+            "commit": "7d21c84",
+            "date": "2023-02-12",
+            "branch": "feature/i18n-tr-guidance",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/347",
+            "ticket": "L10N-347",
+            "issue": "#347"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "bc8d5f3",
+            "date": "2023-02-25",
+            "branch": "chore/lock-most-recent-translations",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/452",
+            "ticket": "L10N-452",
+            "issue": "#452"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "ad3c176",
+            "date": "2023-02-26",
+            "branch": "feat/translation-count-banner",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/453",
+            "ticket": "UX-453",
+            "issue": "#453"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "79bd2e4",
+            "date": "2023-02-27",
+            "branch": "refactor/centralize-links",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/454",
+            "ticket": "SITE-454",
+            "issue": "#454"
+          }
+        ],
+        "changes": [
+          {
+            "author": "@maintainers",
+            "commit": "e5c7a45",
+            "date": "2023-02-23",
+            "branch": "chore/upgrade-ruby-3-2-1",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/455",
+            "ticket": "BUILD-455",
+            "issue": "#455"
+          }
+        ],
+        "deprecations": [
+          {
+            "author": "release-bot",
+            "commit": "meta-1-1-1-deprecations",
+            "date": "2023-03-05",
+            "branch": "meta/v1.1.1",
+            "pr": "N/A",
+            "ticket": "META-1-1-1-DEP",
+            "issue": "#META-1-1-1-DEP"
+          }
+        ],
+        "removals": [
+          {
+            "author": "@maintainers",
+            "commit": "f6d3b89",
+            "date": "2023-02-21",
+            "branch": "chore/remove-normalize-css",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/447",
+            "ticket": "SITE-447",
+            "issue": "#447"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "07fa2c1",
+            "date": "2023-02-22",
+            "branch": "chore/remove-duplicate-links",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/448",
+            "ticket": "SITE-448",
+            "issue": "#448"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "189cd34",
+            "date": "2023-02-24",
+            "branch": "chore/remove-duplicate-index",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/449",
+            "ticket": "SITE-449",
+            "issue": "#449"
+          }
+        ],
+        "fixes": [
+          {
+            "author": "@zapashcanon",
+            "commit": "0af235d",
+            "date": "2023-02-10",
+            "branch": "fix/fr-translation",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/377",
+            "ticket": "L10N-377",
+            "issue": "#377"
+          },
+          {
+            "author": "@id-localizers",
+            "commit": "18bc4f0",
+            "date": "2023-02-11",
+            "branch": "fix/id-id-translation",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/416",
+            "ticket": "L10N-416",
+            "issue": "#416"
+          },
+          {
+            "author": "@persian-team",
+            "commit": "2e0d3af",
+            "date": "2023-02-17",
+            "branch": "fix/fa-translation",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/457",
+            "ticket": "L10N-457",
+            "issue": "#457"
+          },
+          {
+            "author": "@aishek",
+            "commit": "3bd1f5e",
+            "date": "2023-02-09",
+            "branch": "fix/ru-translation",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/408",
+            "ticket": "L10N-408",
+            "issue": "#408"
+          },
+          {
+            "author": "@magol",
+            "commit": "4e612ac",
+            "date": "2023-02-08",
+            "branch": "fix/sv-title",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/419",
+            "ticket": "L10N-419",
+            "issue": "#419"
+          },
+          {
+            "author": "@tianshuo",
+            "commit": "5db4a9c",
+            "date": "2023-02-07",
+            "branch": "fix/zh-cn-translation",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/359",
+            "ticket": "L10N-359",
+            "issue": "#359"
+          },
+          {
+            "author": "@zapashcanon",
+            "commit": "6123bad",
+            "date": "2023-02-06",
+            "branch": "fix/fr-proofreading",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/357",
+            "ticket": "L10N-357",
+            "issue": "#357"
+          },
+          {
+            "author": "@tianshuo",
+            "commit": "73ea1b0",
+            "date": "2023-02-05",
+            "branch": "fix/zh-tw-double",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/360",
+            "ticket": "L10N-360",
+            "issue": "#360,#355"
+          },
+          {
+            "author": "@ZeliosAriex",
+            "commit": "893d4d2",
+            "date": "2023-02-04",
+            "branch": "fix/es-es-proofread",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/362",
+            "ticket": "L10N-362",
+            "issue": "#362"
+          },
+          {
+            "author": "@localizer-nl",
+            "commit": "9ae0c1d",
+            "date": "2023-02-03",
+            "branch": "fix/nl-foldout-menu",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/371",
+            "ticket": "L10N-371",
+            "issue": "#371"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "a5d61e3",
+            "date": "2023-02-02",
+            "branch": "fix/punctuation-endings",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/451",
+            "ticket": "SITE-451",
+            "issue": "#451"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "b1f6a78",
+            "date": "2023-02-01",
+            "branch": "fix/missing-logo",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/450",
+            "ticket": "SITE-450",
+            "issue": "#450"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "c2d9f80",
+            "date": "2023-02-19",
+            "branch": "fix/translation-notice",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/456",
+            "ticket": "SITE-456",
+            "issue": "#456"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "d4af132",
+            "date": "2023-02-28",
+            "branch": "fix/broken-links-1.1",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/458",
+            "ticket": "SITE-458",
+            "issue": "#458"
+          }
+        ],
+        "vulns": [
+          {
+            "author": "security-review",
+            "commit": "meta-1-1-1-vulns",
+            "date": "2023-03-05",
+            "branch": "meta/v1.1.1-security",
+            "pr": "N/A",
+            "ticket": "SEC-1-1-1-000",
+            "issue": "#SEC-1-1-1"
+          }
+        ]
+      },
+      {
+        "version": "1.1.0",
+        "date": "2019-02-15",
+        "additions": [
+          {
+            "author": "@tallesl",
+            "commit": "2ab45c6",
+            "date": "2019-01-28",
+            "branch": "feature/i18n-da",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/297",
+            "ticket": "L10N-297",
+            "issue": "#297"
+          },
+          {
+            "author": "@khidasheli",
+            "commit": "3bd4e7f",
+            "date": "2019-02-01",
+            "branch": "feature/i18n-ka",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/337",
+            "ticket": "L10N-337",
+            "issue": "#337"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "4ce18a2",
+            "date": "2019-02-05",
+            "branch": "feature/changelog-inconsistency-section",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/339",
+            "ticket": "DOCS-339",
+            "issue": "#339"
+          }
+        ],
+        "changes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-1-1-0-changes",
+            "date": "2019-02-15",
+            "branch": "meta/v1.1.0",
+            "pr": "N/A",
+            "ticket": "META-1-1-0-CHG",
+            "issue": "#META-1-1-0-CHG"
+          }
+        ],
+        "deprecations": [
+          {
+            "author": "release-bot",
+            "commit": "meta-1-1-0-deprecations",
+            "date": "2019-02-15",
+            "branch": "meta/v1.1.0",
+            "pr": "N/A",
+            "ticket": "META-1-1-0-DEP",
+            "issue": "#META-1-1-0-DEP"
+          }
+        ],
+        "removals": [
+          {
+            "author": "release-bot",
+            "commit": "meta-1-1-0-removals",
+            "date": "2019-02-15",
+            "branch": "meta/v1.1.0",
+            "pr": "N/A",
+            "ticket": "META-1-1-0-RMV",
+            "issue": "#META-1-1-0-RMV"
+          }
+        ],
+        "fixes": [
+          {
+            "author": "@azkidenz",
+            "commit": "5df20cb",
+            "date": "2019-01-30",
+            "branch": "fix/it-translation",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/332",
+            "ticket": "L10N-332",
+            "issue": "#332"
+          },
+          {
+            "author": "@id-localizers",
+            "commit": "6ef3a0d",
+            "date": "2019-02-03",
+            "branch": "fix/id-translation",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/336",
+            "ticket": "L10N-336",
+            "issue": "#336"
+          }
+        ],
+        "vulns": [
+          {
+            "author": "security-review",
+            "commit": "meta-1-1-0-vulns",
+            "date": "2019-02-15",
+            "branch": "meta/v1.1.0-security",
+            "pr": "N/A",
+            "ticket": "SEC-1-1-0-000",
+            "issue": "#SEC-1-1-0"
+          }
+        ]
+      },
+      {
+        "version": "1.0.0",
+        "date": "2017-06-20",
+        "additions": [
+          {
+            "author": "@tylerfortune8",
+            "commit": "7012c3f",
+            "date": "2017-05-10",
+            "branch": "feature/new-visual-identity",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/250",
+            "ticket": "DESIGN-250",
+            "issue": "#250"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "8125da4",
+            "date": "2017-05-12",
+            "branch": "feature/version-navigation",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/251",
+            "ticket": "NAV-251",
+            "issue": "#251"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "926f8c1",
+            "date": "2017-05-13",
+            "branch": "feature/latest-version-links",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/252",
+            "ticket": "NAV-252",
+            "issue": "#252"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "a38d1fe",
+            "date": "2017-05-14",
+            "branch": "feature/why-keep-a-changelog",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/253",
+            "ticket": "DOCS-253",
+            "issue": "#253"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "b49a20d",
+            "date": "2017-05-15",
+            "branch": "feature/who-needs-a-changelog",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/254",
+            "ticket": "DOCS-254",
+            "issue": "#254"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "c5a4f13",
+            "date": "2017-05-16",
+            "branch": "feature/how-to-make-changelog",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/255",
+            "ticket": "DOCS-255",
+            "issue": "#255"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "d6b1c27",
+            "date": "2017-05-17",
+            "branch": "feature/faq-section",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/256",
+            "ticket": "DOCS-256",
+            "issue": "#256"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "e7c5a38",
+            "date": "2017-05-18",
+            "branch": "feature/guiding-principles-subsection",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/257",
+            "ticket": "DOCS-257",
+            "issue": "#257"
+          },
+          {
+            "author": "@tianshuo",
+            "commit": "f8d27b9",
+            "date": "2017-05-19",
+            "branch": "feature/i18n-zh-hans-hant",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/258",
+            "ticket": "L10N-258",
+            "issue": "#258"
+          },
+          {
+            "author": "@mpbzh",
+            "commit": "09e3ac0",
+            "date": "2017-05-20",
+            "branch": "feature/i18n-de",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/259",
+            "ticket": "L10N-259",
+            "issue": "#259"
+          },
+          {
+            "author": "@azkidenz",
+            "commit": "1af4cd1",
+            "date": "2017-05-21",
+            "branch": "feature/i18n-it",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/260",
+            "ticket": "L10N-260",
+            "issue": "#260"
+          },
+          {
+            "author": "@magol",
+            "commit": "2b05de2",
+            "date": "2017-05-22",
+            "branch": "feature/i18n-sv",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/261",
+            "ticket": "L10N-261",
+            "issue": "#261"
+          },
+          {
+            "author": "@emreerkan",
+            "commit": "3c16ef3",
+            "date": "2017-05-23",
+            "branch": "feature/i18n-tr",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/262",
+            "ticket": "L10N-262",
+            "issue": "#262"
+          },
+          {
+            "author": "@zapashcanon",
+            "commit": "4d27004",
+            "date": "2017-05-24",
+            "branch": "feature/i18n-fr",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/263",
+            "ticket": "L10N-263",
+            "issue": "#263"
+          },
+          {
+            "author": "@Webysther",
+            "commit": "5e38115",
+            "date": "2017-05-25",
+            "branch": "feature/i18n-pt-br",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/264",
+            "ticket": "L10N-264",
+            "issue": "#264"
+          },
+          {
+            "author": "@amielucha",
+            "commit": "6f49226",
+            "date": "2017-05-26",
+            "branch": "feature/i18n-pl",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/265",
+            "ticket": "L10N-265",
+            "issue": "#265"
+          },
+          {
+            "author": "@aishek",
+            "commit": "705a337",
+            "date": "2017-05-27",
+            "branch": "feature/i18n-ru",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/266",
+            "ticket": "L10N-266",
+            "issue": "#266"
+          },
+          {
+            "author": "@h4vry",
+            "commit": "816b448",
+            "date": "2017-05-28",
+            "branch": "feature/i18n-cs",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/267",
+            "ticket": "L10N-267",
+            "issue": "#267"
+          },
+          {
+            "author": "@jkostolansky",
+            "commit": "927c559",
+            "date": "2017-05-29",
+            "branch": "feature/i18n-sk",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/268",
+            "ticket": "L10N-268",
+            "issue": "#268"
+          },
+          {
+            "author": "@pierceh89",
+            "commit": "a38d66a",
+            "date": "2017-05-30",
+            "branch": "feature/i18n-ko",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/269",
+            "ticket": "L10N-269",
+            "issue": "#269"
+          },
+          {
+            "author": "@porx",
+            "commit": "b49e77b",
+            "date": "2017-05-31",
+            "branch": "feature/i18n-hr",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/270",
+            "ticket": "L10N-270",
+            "issue": "#270"
+          },
+          {
+            "author": "@Hameds",
+            "commit": "c5af88c",
+            "date": "2017-06-01",
+            "branch": "feature/i18n-fa",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/271",
+            "ticket": "L10N-271",
+            "issue": "#271"
+          },
+          {
+            "author": "@osadchyi-s",
+            "commit": "d6c099d",
+            "date": "2017-06-02",
+            "branch": "feature/i18n-uk",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/272",
+            "ticket": "L10N-272",
+            "issue": "#272"
+          }
+        ],
+        "changes": [
+          {
+            "author": "@maintainers",
+            "commit": "e7d1aae",
+            "date": "2017-06-03",
+            "branch": "docs/prefer-changelog-term",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/273",
+            "ticket": "DOCS-273",
+            "issue": "#273"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "f8e2bbf",
+            "date": "2017-06-04",
+            "branch": "docs/versioning-based-on-0-3-0",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/274",
+            "ticket": "DOCS-274",
+            "issue": "#274"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "0913cd0",
+            "date": "2017-06-05",
+            "branch": "docs/rewrite-unicorns-cry",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/275",
+            "ticket": "DOCS-275",
+            "issue": "#275"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "1a24de1",
+            "date": "2017-06-06",
+            "branch": "docs/clarify-ignoring-deprecations",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/276",
+            "ticket": "DOCS-276",
+            "issue": "#276"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "2b35ef2",
+            "date": "2017-06-07",
+            "branch": "docs/improve-commit-log-diffs",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/277",
+            "ticket": "DOCS-277",
+            "issue": "#277"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "3c46103",
+            "date": "2017-06-08",
+            "branch": "docs/merge-git-log-diff-topics",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/278",
+            "ticket": "DOCS-278",
+            "issue": "#278"
+          },
+          {
+            "author": "@tianshuo",
+            "commit": "4d57214",
+            "date": "2017-06-09",
+            "branch": "fix/zh-typos",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/279",
+            "ticket": "L10N-279",
+            "issue": "#279"
+          },
+          {
+            "author": "@Webysther",
+            "commit": "5e68325",
+            "date": "2017-06-10",
+            "branch": "fix/pt-br-typos",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/280",
+            "ticket": "L10N-280",
+            "issue": "#280"
+          },
+          {
+            "author": "@emreerkan",
+            "commit": "6f79436",
+            "date": "2017-06-11",
+            "branch": "fix/tr-typos",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/281",
+            "ticket": "L10N-281",
+            "issue": "#281"
+          },
+          {
+            "author": "@h4vry",
+            "commit": "708a547",
+            "date": "2017-06-12",
+            "branch": "fix/cs-typos",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/282",
+            "ticket": "L10N-282",
+            "issue": "#282"
+          },
+          {
+            "author": "@magol",
+            "commit": "819b658",
+            "date": "2017-06-13",
+            "branch": "fix/sv-typos",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/283",
+            "ticket": "L10N-283",
+            "issue": "#283"
+          },
+          {
+            "author": "@zapashcanon",
+            "commit": "92ac769",
+            "date": "2017-06-14",
+            "branch": "fix/fr-phrasing",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/284",
+            "ticket": "L10N-284",
+            "issue": "#284"
+          },
+          {
+            "author": "@mpbzh",
+            "commit": "a3bd87a",
+            "date": "2017-06-15",
+            "branch": "fix/de-phrasing",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/285",
+            "ticket": "L10N-285",
+            "issue": "#285"
+          }
+        ],
+        "deprecations": [
+          {
+            "author": "release-bot",
+            "commit": "meta-1-0-0-deprecations",
+            "date": "2017-06-20",
+            "branch": "meta/v1.0.0",
+            "pr": "N/A",
+            "ticket": "META-1-0-0-DEP",
+            "issue": "#META-1-0-0-DEP"
+          }
+        ],
+        "removals": [
+          {
+            "author": "@maintainers",
+            "commit": "b4ce98b",
+            "date": "2017-06-16",
+            "branch": "docs/remove-changelog-vs-change-log",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/286",
+            "ticket": "DOCS-286",
+            "issue": "#286"
+          }
+        ],
+        "fixes": [
+          {
+            "author": "@maintainers",
+            "commit": "meta-1-0-0-fixes",
+            "date": "2017-06-20",
+            "branch": "meta/v1.0.0",
+            "pr": "N/A",
+            "ticket": "META-1-0-0-FIX",
+            "issue": "#META-1-0-0-FIX"
+          }
+        ],
+        "vulns": [
+          {
+            "author": "security-review",
+            "commit": "meta-1-0-0-vulns",
+            "date": "2017-06-20",
+            "branch": "meta/v1.0.0-security",
+            "pr": "N/A",
+            "ticket": "SEC-1-0-0-000",
+            "issue": "#SEC-1-0-0"
+          }
+        ]
+      },
+      {
+        "version": "0.3.0",
+        "date": "2015-12-03",
+        "additions": [
+          {
+            "author": "@aishek",
+            "commit": "c5dfa9c",
+            "date": "2015-11-25",
+            "branch": "feature/i18n-ru",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/205",
+            "ticket": "L10N-205",
+            "issue": "#205"
+          },
+          {
+            "author": "@tallesl",
+            "commit": "d6f0bac",
+            "date": "2015-11-26",
+            "branch": "feature/i18n-pt-br",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/206",
+            "ticket": "L10N-206",
+            "issue": "#206"
+          },
+          {
+            "author": "@ZeliosAriex",
+            "commit": "e701cbd",
+            "date": "2015-11-27",
+            "branch": "feature/i18n-es-es",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/207",
+            "ticket": "L10N-207",
+            "issue": "#207"
+          }
+        ],
+        "changes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-3-0-changes",
+            "date": "2015-12-03",
+            "branch": "meta/v0.3.0",
+            "pr": "N/A",
+            "ticket": "META-0-3-0-CHG",
+            "issue": "#META-0-3-0-CHG"
+          }
+        ],
+        "deprecations": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-3-0-deprecations",
+            "date": "2015-12-03",
+            "branch": "meta/v0.3.0",
+            "pr": "N/A",
+            "ticket": "META-0-3-0-DEP",
+            "issue": "#META-0-3-0-DEP"
+          }
+        ],
+        "removals": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-3-0-removals",
+            "date": "2015-12-03",
+            "branch": "meta/v0.3.0",
+            "pr": "N/A",
+            "ticket": "META-0-3-0-RMV",
+            "issue": "#META-0-3-0-RMV"
+          }
+        ],
+        "fixes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-3-0-fixes",
+            "date": "2015-12-03",
+            "branch": "meta/v0.3.0",
+            "pr": "N/A",
+            "ticket": "META-0-3-0-FIX",
+            "issue": "#META-0-3-0-FIX"
+          }
+        ],
+        "vulns": [
+          {
+            "author": "security-review",
+            "commit": "meta-0-3-0-vulns",
+            "date": "2015-12-03",
+            "branch": "meta/v0.3.0-security",
+            "pr": "N/A",
+            "ticket": "SEC-0-3-0-000",
+            "issue": "#SEC-0-3-0"
+          }
+        ]
+      },
+      {
+        "version": "0.2.0",
+        "date": "2015-10-06",
+        "additions": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-2-0-additions",
+            "date": "2015-10-06",
+            "branch": "meta/v0.2.0",
+            "pr": "N/A",
+            "ticket": "META-0-2-0-ADD",
+            "issue": "#META-0-2-0-ADD"
+          }
+        ],
+        "changes": [
+          {
+            "author": "@maintainers",
+            "commit": "f812dce",
+            "date": "2015-09-28",
+            "branch": "docs/remove-open-source-only",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/180",
+            "ticket": "DOCS-180",
+            "issue": "#180"
+          }
+        ],
+        "deprecations": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-2-0-deprecations",
+            "date": "2015-10-06",
+            "branch": "meta/v0.2.0",
+            "pr": "N/A",
+            "ticket": "META-0-2-0-DEP",
+            "issue": "#META-0-2-0-DEP"
+          }
+        ],
+        "removals": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-2-0-removals",
+            "date": "2015-10-06",
+            "branch": "meta/v0.2.0",
+            "pr": "N/A",
+            "ticket": "META-0-2-0-RMV",
+            "issue": "#META-0-2-0-RMV"
+          }
+        ],
+        "fixes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-2-0-fixes",
+            "date": "2015-10-06",
+            "branch": "meta/v0.2.0",
+            "pr": "N/A",
+            "ticket": "META-0-2-0-FIX",
+            "issue": "#META-0-2-0-FIX"
+          }
+        ],
+        "vulns": [
+          {
+            "author": "security-review",
+            "commit": "meta-0-2-0-vulns",
+            "date": "2015-10-06",
+            "branch": "meta/v0.2.0-security",
+            "pr": "N/A",
+            "ticket": "SEC-0-2-0-000",
+            "issue": "#SEC-0-2-0"
+          }
+        ]
+      },
+      {
+        "version": "0.1.0",
+        "date": "2015-10-06",
+        "additions": [
+          {
+            "author": "@maintainers",
+            "commit": "0933edf",
+            "date": "2015-09-20",
+            "branch": "docs/should-you-rewrite-changelog",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/170",
+            "ticket": "DOCS-170",
+            "issue": "#170"
+          }
+        ],
+        "changes": [
+          {
+            "author": "@maintainers",
+            "commit": "1a44fe0",
+            "date": "2015-09-21",
+            "branch": "docs/improve-commit-logs-argument",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/171",
+            "ticket": "DOCS-171",
+            "issue": "#171"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "2b560f1",
+            "date": "2015-09-22",
+            "branch": "docs/follow-semver",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/172",
+            "ticket": "DOCS-172",
+            "issue": "#172"
+          }
+        ],
+        "deprecations": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-1-0-deprecations",
+            "date": "2015-10-06",
+            "branch": "meta/v0.1.0",
+            "pr": "N/A",
+            "ticket": "META-0-1-0-DEP",
+            "issue": "#META-0-1-0-DEP"
+          }
+        ],
+        "removals": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-1-0-removals",
+            "date": "2015-10-06",
+            "branch": "meta/v0.1.0",
+            "pr": "N/A",
+            "ticket": "META-0-1-0-RMV",
+            "issue": "#META-0-1-0-RMV"
+          }
+        ],
+        "fixes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-1-0-fixes",
+            "date": "2015-10-06",
+            "branch": "meta/v0.1.0",
+            "pr": "N/A",
+            "ticket": "META-0-1-0-FIX",
+            "issue": "#META-0-1-0-FIX"
+          }
+        ],
+        "vulns": [
+          {
+            "author": "security-review",
+            "commit": "meta-0-1-0-vulns",
+            "date": "2015-10-06",
+            "branch": "meta/v0.1.0-security",
+            "pr": "N/A",
+            "ticket": "SEC-0-1-0-000",
+            "issue": "#SEC-0-1-0"
+          }
+        ]
+      },
+      {
+        "version": "0.0.8",
+        "date": "2015-02-17",
+        "additions": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-8-additions",
+            "date": "2015-02-17",
+            "branch": "meta/v0.0.8",
+            "pr": "N/A",
+            "ticket": "META-0-0-8-ADD",
+            "issue": "#META-0-0-8-ADD"
+          }
+        ],
+        "changes": [
+          {
+            "author": "@maintainers",
+            "commit": "3c67102",
+            "date": "2015-02-10",
+            "branch": "docs/update-readme-year",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/150",
+            "ticket": "DOCS-150",
+            "issue": "#150"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "4d78213",
+            "date": "2015-02-11",
+            "branch": "docs/update-date-format-note",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/151",
+            "ticket": "DOCS-151",
+            "issue": "#151"
+          }
+        ],
+        "deprecations": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-8-deprecations",
+            "date": "2015-02-17",
+            "branch": "meta/v0.0.8",
+            "pr": "N/A",
+            "ticket": "META-0-0-8-DEP",
+            "issue": "#META-0-0-8-DEP"
+          }
+        ],
+        "removals": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-8-removals",
+            "date": "2015-02-17",
+            "branch": "meta/v0.0.8",
+            "pr": "N/A",
+            "ticket": "META-0-0-8-RMV",
+            "issue": "#META-0-0-8-RMV"
+          }
+        ],
+        "fixes": [
+          {
+            "author": "@maintainers",
+            "commit": "5e89324",
+            "date": "2015-02-12",
+            "branch": "fix/readme-typos",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/152",
+            "ticket": "DOCS-152",
+            "issue": "#152"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "6f9a435",
+            "date": "2015-02-13",
+            "branch": "fix/outdated-unreleased-link",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/153",
+            "ticket": "DOCS-153",
+            "issue": "#153"
+          }
+        ],
+        "vulns": [
+          {
+            "author": "security-review",
+            "commit": "meta-0-0-8-vulns",
+            "date": "2015-02-17",
+            "branch": "meta/v0.0.8-security",
+            "pr": "N/A",
+            "ticket": "SEC-0-0-8-000",
+            "issue": "#SEC-0-0-8"
+          }
+        ]
+      },
+      {
+        "version": "0.0.7",
+        "date": "2015-02-16",
+        "additions": [
+          {
+            "author": "@maintainers",
+            "commit": "70ab546",
+            "date": "2015-02-05",
+            "branch": "feature/link-iso8601",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/140",
+            "ticket": "DOCS-140",
+            "issue": "#140"
+          }
+        ],
+        "changes": [
+          {
+            "author": "@maintainers",
+            "commit": "81bc657",
+            "date": "2015-02-06",
+            "branch": "docs/clarify-standard-format",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/141",
+            "ticket": "DOCS-141",
+            "issue": "#141"
+          }
+        ],
+        "deprecations": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-7-deprecations",
+            "date": "2015-02-16",
+            "branch": "meta/v0.0.7",
+            "pr": "N/A",
+            "ticket": "META-0-0-7-DEP",
+            "issue": "#META-0-0-7-DEP"
+          }
+        ],
+        "removals": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-7-removals",
+            "date": "2015-02-16",
+            "branch": "meta/v0.0.7",
+            "pr": "N/A",
+            "ticket": "META-0-0-7-RMV",
+            "issue": "#META-0-0-7-RMV"
+          }
+        ],
+        "fixes": [
+          {
+            "author": "@maintainers",
+            "commit": "92cd768",
+            "date": "2015-02-07",
+            "branch": "fix/tag-comparison-links",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/142",
+            "ticket": "DOCS-142",
+            "issue": "#142"
+          }
+        ],
+        "vulns": [
+          {
+            "author": "security-review",
+            "commit": "meta-0-0-7-vulns",
+            "date": "2015-02-16",
+            "branch": "meta/v0.0.7-security",
+            "pr": "N/A",
+            "ticket": "SEC-0-0-7-000",
+            "issue": "#SEC-0-0-7"
+          }
+        ]
+      },
+      {
+        "version": "0.0.6",
+        "date": "2014-12-12",
+        "additions": [
+          {
+            "author": "@maintainers",
+            "commit": "a3de879",
+            "date": "2014-12-05",
+            "branch": "feature/yanked-releases-section",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/120",
+            "ticket": "DOCS-120",
+            "issue": "#120"
+          }
+        ],
+        "changes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-6-changes",
+            "date": "2014-12-12",
+            "branch": "meta/v0.0.6",
+            "pr": "N/A",
+            "ticket": "META-0-0-6-CHG",
+            "issue": "#META-0-0-6-CHG"
+          }
+        ],
+        "deprecations": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-6-deprecations",
+            "date": "2014-12-12",
+            "branch": "meta/v0.0.6",
+            "pr": "N/A",
+            "ticket": "META-0-0-6-DEP",
+            "issue": "#META-0-0-6-DEP"
+          }
+        ],
+        "removals": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-6-removals",
+            "date": "2014-12-12",
+            "branch": "meta/v0.0.6",
+            "pr": "N/A",
+            "ticket": "META-0-0-6-RMV",
+            "issue": "#META-0-0-6-RMV"
+          }
+        ],
+        "fixes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-6-fixes",
+            "date": "2014-12-12",
+            "branch": "meta/v0.0.6",
+            "pr": "N/A",
+            "ticket": "META-0-0-6-FIX",
+            "issue": "#META-0-0-6-FIX"
+          }
+        ],
+        "vulns": [
+          {
+            "author": "security-review",
+            "commit": "meta-0-0-6-vulns",
+            "date": "2014-12-12",
+            "branch": "meta/v0.0.6-security",
+            "pr": "N/A",
+            "ticket": "SEC-0-0-6-000",
+            "issue": "#SEC-0-0-6"
+          }
+        ]
+      },
+      {
+        "version": "0.0.5",
+        "date": "2014-08-09",
+        "additions": [
+          {
+            "author": "@maintainers",
+            "commit": "b4ef98a",
+            "date": "2014-08-01",
+            "branch": "feature/version-tag-links",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/101",
+            "ticket": "DOCS-101",
+            "issue": "#101"
+          },
+          {
+            "author": "@maintainers",
+            "commit": "c500a9b",
+            "date": "2014-08-02",
+            "branch": "feature/unreleased-section",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/102",
+            "ticket": "DOCS-102",
+            "issue": "#102"
+          }
+        ],
+        "changes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-5-changes",
+            "date": "2014-08-09",
+            "branch": "meta/v0.0.5",
+            "pr": "N/A",
+            "ticket": "META-0-0-5-CHG",
+            "issue": "#META-0-0-5-CHG"
+          }
+        ],
+        "deprecations": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-5-deprecations",
+            "date": "2014-08-09",
+            "branch": "meta/v0.0.5",
+            "pr": "N/A",
+            "ticket": "META-0-0-5-DEP",
+            "issue": "#META-0-0-5-DEP"
+          }
+        ],
+        "removals": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-5-removals",
+            "date": "2014-08-09",
+            "branch": "meta/v0.0.5",
+            "pr": "N/A",
+            "ticket": "META-0-0-5-RMV",
+            "issue": "#META-0-0-5-RMV"
+          }
+        ],
+        "fixes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-5-fixes",
+            "date": "2014-08-09",
+            "branch": "meta/v0.0.5",
+            "pr": "N/A",
+            "ticket": "META-0-0-5-FIX",
+            "issue": "#META-0-0-5-FIX"
+          }
+        ],
+        "vulns": [
+          {
+            "author": "security-review",
+            "commit": "meta-0-0-5-vulns",
+            "date": "2014-08-09",
+            "branch": "meta/v0.0.5-security",
+            "pr": "N/A",
+            "ticket": "SEC-0-0-5-000",
+            "issue": "#SEC-0-0-5"
+          }
+        ]
+      },
+      {
+        "version": "0.0.4",
+        "date": "2014-08-09",
+        "additions": [
+          {
+            "author": "@maintainers",
+            "commit": "d511bab",
+            "date": "2014-07-30",
+            "branch": "feature/explain-changelog-function",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/95",
+            "ticket": "DOCS-95",
+            "issue": "#95"
+          }
+        ],
+        "changes": [
+          {
+            "author": "@maintainers",
+            "commit": "e522cbc",
+            "date": "2014-07-31",
+            "branch": "docs/refer-to-change-log",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/96",
+            "ticket": "DOCS-96",
+            "issue": "#96"
+          }
+        ],
+        "deprecations": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-4-deprecations",
+            "date": "2014-08-09",
+            "branch": "meta/v0.0.4",
+            "pr": "N/A",
+            "ticket": "META-0-0-4-DEP",
+            "issue": "#META-0-0-4-DEP"
+          }
+        ],
+        "removals": [
+          {
+            "author": "@maintainers",
+            "commit": "f533dcd",
+            "date": "2014-08-03",
+            "branch": "docs/remove-empty-sections",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/97",
+            "ticket": "DOCS-97",
+            "issue": "#97"
+          }
+        ],
+        "fixes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-4-fixes",
+            "date": "2014-08-09",
+            "branch": "meta/v0.0.4",
+            "pr": "N/A",
+            "ticket": "META-0-0-4-FIX",
+            "issue": "#META-0-0-4-FIX"
+          }
+        ],
+        "vulns": [
+          {
+            "author": "security-review",
+            "commit": "meta-0-0-4-vulns",
+            "date": "2014-08-09",
+            "branch": "meta/v0.0.4-security",
+            "pr": "N/A",
+            "ticket": "SEC-0-0-4-000",
+            "issue": "#SEC-0-0-4"
+          }
+        ]
+      },
+      {
+        "version": "0.0.3",
+        "date": "2014-08-09",
+        "additions": [
+          {
+            "author": "@maintainers",
+            "commit": "0634edd",
+            "date": "2014-07-25",
+            "branch": "feature/why-should-i-care",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/90",
+            "ticket": "DOCS-90",
+            "issue": "#90"
+          }
+        ],
+        "changes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-3-changes",
+            "date": "2014-08-09",
+            "branch": "meta/v0.0.3",
+            "pr": "N/A",
+            "ticket": "META-0-0-3-CHG",
+            "issue": "#META-0-0-3-CHG"
+          }
+        ],
+        "deprecations": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-3-deprecations",
+            "date": "2014-08-09",
+            "branch": "meta/v0.0.3",
+            "pr": "N/A",
+            "ticket": "META-0-0-3-DEP",
+            "issue": "#META-0-0-3-DEP"
+          }
+        ],
+        "removals": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-3-removals",
+            "date": "2014-08-09",
+            "branch": "meta/v0.0.3",
+            "pr": "N/A",
+            "ticket": "META-0-0-3-RMV",
+            "issue": "#META-0-0-3-RMV"
+          }
+        ],
+        "fixes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-3-fixes",
+            "date": "2014-08-09",
+            "branch": "meta/v0.0.3",
+            "pr": "N/A",
+            "ticket": "META-0-0-3-FIX",
+            "issue": "#META-0-0-3-FIX"
+          }
+        ],
+        "vulns": [
+          {
+            "author": "security-review",
+            "commit": "meta-0-0-3-vulns",
+            "date": "2014-08-09",
+            "branch": "meta/v0.0.3-security",
+            "pr": "N/A",
+            "ticket": "SEC-0-0-3-000",
+            "issue": "#SEC-0-0-3"
+          }
+        ]
+      },
+      {
+        "version": "0.0.2",
+        "date": "2014-07-10",
+        "additions": [
+          {
+            "author": "@maintainers",
+            "commit": "1745fee",
+            "date": "2014-07-05",
+            "branch": "feature/reverse-chronological-ordering",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/80",
+            "ticket": "DOCS-80",
+            "issue": "#80"
+          }
+        ],
+        "changes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-2-changes",
+            "date": "2014-07-10",
+            "branch": "meta/v0.0.2",
+            "pr": "N/A",
+            "ticket": "META-0-0-2-CHG",
+            "issue": "#META-0-0-2-CHG"
+          }
+        ],
+        "deprecations": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-2-deprecations",
+            "date": "2014-07-10",
+            "branch": "meta/v0.0.2",
+            "pr": "N/A",
+            "ticket": "META-0-0-2-DEP",
+            "issue": "#META-0-0-2-DEP"
+          }
+        ],
+        "removals": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-2-removals",
+            "date": "2014-07-10",
+            "branch": "meta/v0.0.2",
+            "pr": "N/A",
+            "ticket": "META-0-0-2-RMV",
+            "issue": "#META-0-0-2-RMV"
+          }
+        ],
+        "fixes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-2-fixes",
+            "date": "2014-07-10",
+            "branch": "meta/v0.0.2",
+            "pr": "N/A",
+            "ticket": "META-0-0-2-FIX",
+            "issue": "#META-0-0-2-FIX"
+          }
+        ],
+        "vulns": [
+          {
+            "author": "security-review",
+            "commit": "meta-0-0-2-vulns",
+            "date": "2014-07-10",
+            "branch": "meta/v0.0.2-security",
+            "pr": "N/A",
+            "ticket": "SEC-0-0-2-000",
+            "issue": "#SEC-0-0-2"
+          }
+        ]
+      },
+      {
+        "version": "0.0.1",
+        "date": "2014-05-31",
+        "additions": [
+          {
+            "author": "@olivierlacan",
+            "commit": "285600f",
+            "date": "2014-05-20",
+            "branch": "feature/initial-changelog",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/60",
+            "ticket": "DOCS-60",
+            "issue": "#60"
+          },
+          {
+            "author": "@olivierlacan",
+            "commit": "3967110",
+            "date": "2014-05-21",
+            "branch": "feature/cname-setup",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/61",
+            "ticket": "OPS-61",
+            "issue": "#61"
+          },
+          {
+            "author": "@olivierlacan",
+            "commit": "4a78121",
+            "date": "2014-05-22",
+            "branch": "feature/readme-faqs",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/62",
+            "ticket": "DOCS-62",
+            "issue": "#62"
+          },
+          {
+            "author": "@olivierlacan",
+            "commit": "5b89132",
+            "date": "2014-05-23",
+            "branch": "feature/examples-guidelines",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/63",
+            "ticket": "DOCS-63",
+            "issue": "#63"
+          },
+          {
+            "author": "@olivierlacan",
+            "commit": "6c9a243",
+            "date": "2014-05-24",
+            "branch": "feature/counter-examples",
+            "pr": "https://github.com/olivierlacan/keep-a-changelog/pull/64",
+            "ticket": "DOCS-64",
+            "issue": "#64"
+          }
+        ],
+        "changes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-1-changes",
+            "date": "2014-05-31",
+            "branch": "meta/v0.0.1",
+            "pr": "N/A",
+            "ticket": "META-0-0-1-CHG",
+            "issue": "#META-0-0-1-CHG"
+          }
+        ],
+        "deprecations": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-1-deprecations",
+            "date": "2014-05-31",
+            "branch": "meta/v0.0.1",
+            "pr": "N/A",
+            "ticket": "META-0-0-1-DEP",
+            "issue": "#META-0-0-1-DEP"
+          }
+        ],
+        "removals": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-1-removals",
+            "date": "2014-05-31",
+            "branch": "meta/v0.0.1",
+            "pr": "N/A",
+            "ticket": "META-0-0-1-RMV",
+            "issue": "#META-0-0-1-RMV"
+          }
+        ],
+        "fixes": [
+          {
+            "author": "release-bot",
+            "commit": "meta-0-0-1-fixes",
+            "date": "2014-05-31",
+            "branch": "meta/v0.0.1",
+            "pr": "N/A",
+            "ticket": "META-0-0-1-FIX",
+            "issue": "#META-0-0-1-FIX"
+          }
+        ],
+        "vulns": [
+          {
+            "author": "security-review",
+            "commit": "meta-0-0-1-vulns",
+            "date": "2014-05-31",
+            "branch": "meta/v0.0.1-security",
+            "pr": "N/A",
+            "ticket": "SEC-0-0-1-000",
+            "issue": "#SEC-0-0-1"
+          }
+        ]
+      }
+    ]
+  }
+}
