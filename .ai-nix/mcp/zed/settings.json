@@ -1,0 +1,252 @@
+{
+  "context_servers": {
+    // docker mcp server enable playwright
+    // docker mcp oauth authorize github
+    // docker mcp server enable github-official
+    // "git": {
+    //   "source": "custom",
+    //   "command": "docker",
+    //   "args": ["run", "-i", "--rm", "git"]
+    // },
+    "time": {
+      "source": "custom",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--name",
+        "mcp-time",
+        "--annotation",
+        "scope:global",
+        "--rm",
+        "mcp/time"
+      ]
+    },
+    "docker-memory-global": {
+      "source": "custom",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--name",
+        "mcp-memory",
+        "--annotation",
+        "scope:global",
+        "--rm",
+        "-v",
+        "$HOME/.local/share/mcp/memory/global:/data",
+        "mcp/memory"
+      ]
+    },
+    "docker-mongodb": {
+      "source": "custom",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--name",
+        "mcp-mongodb",
+        "--annotation",
+        "scope:global",
+        "--rm",
+        "-e",
+        "MDB_MCP_CONNECTION_STRING",
+        "-v",
+        "$HOME/.local/share/mcp/mongo/global:/data",
+        "mcp/mongodb"
+      ],
+      "env": {
+        "MDB_MCP_CONNECTION_STRING": "mongodb+srv://$MONGO_USER:$MONGO_PASS@localhost:27017/global"
+      }
+    },
+    "docker-search-duckduckgo": {
+      "source": "custom",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--name",
+        "mcp-duckduckgo",
+        "--annotation",
+        "scope:global",
+        "--rm",
+        "mcp/duckduckgo"
+      ]
+    },
+    "docker-sequentialthinking": {
+      "source": "custom",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--name",
+        "mcp-sequential-thinking",
+        "--annotation",
+        "scope:global",
+        "--rm",
+        "mcp/sequentialthinking"
+      ]
+    },
+    "docker-github": {
+      "source": "custom",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--name",
+        "mcp-github",
+        "--annotation",
+        "scope:global",
+        "--rm",
+        "-e",
+        "GITHUB_PERSONAL_ACCESS_TOKEN",
+        "ghcr.io/github/github-mcp-server"
+      ],
+      "env": {
+        "GITHUB_PERSONAL_ACCESS_TOKEN": "<YOUR_TOKEN>"
+      }
+    },
+    "docker-gitlab": {
+      "source": "custom",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--name",
+        "mcp-gitlab",
+        "--annotation",
+        "scope:global",
+        "--rm",
+        "-e",
+        "GITLAB_API_URL",
+        "-e",
+        "GITLAB_PERSONAL_ACCESS_TOKEN",
+        "mcp/gitlab"
+      ],
+      "env": {
+        "GITLAB_API_URL": "https://sccm.govus.cisco.com/api/v4",
+        "GITLAB_PERSONAL_ACCESS_TOKEN": "op://employee/gitlab/mcp-global/token"
+      }
+    },
+    // "sqlite": {
+    //   "source": "custom",
+    //   "command": "docker",
+    //   "args": ["run", "-i", "--rm", "sqlite"]
+    // },
+    // "fetch": {
+    //   "source": "custom",
+    //   "command": "docker",
+    //   "args": ["run", "-i", "--rm", "fetch"]
+    // },
+    // "sequentialthinking": {
+    //   "source": "custom",
+    //   "command": "docker",
+    //   "args": ["run", "-i", "--rm", "sequentialthinking"]
+    // },
+    // "puppeteer": {
+    //   "source": "custom",
+    //   "command": "docker",
+    //   "args": [
+    //     "run",
+    //     "-i",
+    //     "--rm",
+    //     "--init",
+    //     "-e",
+    //     "DOCKER_CONTAINER=true",
+    //     "puppeteer"
+    //   ]
+    // },
+    // "postgres": {
+    //   "source": "custom",
+    //   "command": "docker",
+    //   "args": [
+    //     "run",
+    //     "-i",
+    //     "--rm",
+    //     "postgres",
+    //     "postgresql://host.docker.internal:5432/mydb"
+    //   ]
+    // },
+    // "memory": {
+    //   "source": "custom",
+    //   "command": "docker",
+    //   "args": ["run", "-i", "--rm", "memory"]
+    // },
+    // "google-maps": {
+    //   "source": "custom",
+    //   "command": "docker",
+    //   "args": ["run", "-i", "--rm", "-e", "GOOGLE_MAPS_API_KEY", "google-maps"],
+    //   "env": {
+    //     "GOOGLE_MAPS_API_KEY": "YOUR-KEY-HERE"
+    //   }
+    // },
+    // "filesystem": {
+    //   "source": "custom",
+    //   "command": "docker",
+    //   "args": [
+    //     "run",
+    //     "-i",
+    //     "--rm",
+    //     "--mount",
+    //     "type=bind,src=/path/to/your/local/folder,dst=/projects/bot-env",
+    //     "filesystem",
+    //     "/projects"
+    //   ]
+    // },
+    // "brave-search": {
+    //   "source": "custom",
+    //   "command": "docker",
+    //   "args": ["run", "-i", "--rm", "-e", "BRAVE_API_KEY", "brave-search"],
+    //   "env": {
+    //     "BRAVE_API_KEY": "YOUR-KEY-HERE"
+    //   }
+    // },
+    "homebrew": {
+      "source": "custom",
+      "command": "brew",
+      "args": ["mcp-server"]
+    },
+    "terraform-context-server": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {}
+    },
+    "container-use-mcp": {
+      "source": "extension",
+      "enabled": true,
+      "settings": {}
+    },
+    "docker-surreal": {
+      "source": "custom",
+      "enabled": true,
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--name",
+        "mcp-surrealdb",
+        "--annotation",
+        "scope:global",
+        "--rm",
+        "--pull",
+        "always",
+        "surrealdb/surrealmcp:latest",
+        "start"
+      ],
+      "env": {
+        "SURREALDB_NS": "git-setup-rs",
+        "SURREALDB_DB": "git-setup-rs",
+        "SURREALDB_USER": "root",
+        // "SURREALDB_URL": "https://surrealdb-tikv.default.svc.cluster.local:8000",
+        "SURREALDB_PASS": "StrongSecretPassword!",
+        "SURREALDB_URL": "ws://localhost:8000/rpc",
+        "SURREAL_MCP_BIND_ADDRESS": "127.0.0.1:8000",
+        "SURREAL_MCP_SERVER_URL": "https://mcp.arusty.dev",
+        "SURREAL_MCP_EXPECTED_AUDIENCE": "https://custom.audience.com/",
+        "SURREAL_MCP_RATE_LIMIT_RPS": "100",
+        "SURREAL_MCP_RATE_LIMIT_BURST": "200",
+        "SURREAL_MCP_AUTH_REQUIRED": "false"
+      }
+    }
+  }
+}

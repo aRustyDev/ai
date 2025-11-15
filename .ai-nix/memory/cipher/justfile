@@ -1,0 +1,6 @@
+install:
+    npm install @byterover/cipher
+    docker-compose up --build -d
+    cp .env.example .env
+    docker build --build-arg BUILD_UI=true .
+    npx -y @smithery/cli install @campfirein/cipher --client claude

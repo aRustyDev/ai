@@ -1,0 +1,60 @@
+{
+  "context_servers": {
+    "ast-grep-ami-eks": {
+      "source": "custom",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "/Users/adamsm/code/images/ami-eks:/data",
+        "mcp/ast-grep"
+      ]
+    },
+    "docker-memory-ami-eks": {
+      "source": "custom",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "/Users/adamsm/code/images/ami-eks:/data",
+        "mcp/memory"
+      ]
+    },
+    "docker-mongodb-ami-eks": {
+      "source": "custom",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "/Users/adamsm/code/images/ami-eks:/data",
+        "mcp/mongodb"
+      ],
+      "env": {
+        "MDB_MCP_CONNECTION_STRING": "mongodb://localhost:27017/ami-eks"
+      }
+    },
+    "task-orchestrator-ami-eks": {
+      "source": "custom",
+      "command": "docker",
+      "args": [
+        "run",
+        "-i",
+        "--rm",
+        "-v",
+        "/Users/adamsm/code/images/ami-eks:/data",
+        "ghcr.io/jpicklyk/task-orchestrator"
+      ]
+    },
+    "just-ami-eks": {
+      "source": "custom",
+      "command": "just-mcp",
+      "args": ["--watch-dir", "/Users/adamsm/code/images/ami-eks"]
+    }
+  }
+}

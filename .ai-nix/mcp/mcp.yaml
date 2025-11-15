@@ -1,0 +1,364 @@
+---
+# https://hub.docker.com/mcp
+# heroku:
+# neon:
+# elasticsearch:
+# grafana:
+# perplexity:
+# playwright:
+# ast-grep:
+# arxiv:
+# astro-docs:
+# browserbase:
+# chroma:
+# azure:
+# buildkite:
+# cloudflare-docs:
+# cockroachdb:
+# deepwiki:
+# shodan:
+# docker:
+# duckduckgo:
+# ffmpeg:
+# gemini-api-docs:
+# inspektor-gadget:
+# linkedin:
+# kubectl:
+# metabase:
+# obsidian:
+# openapi-schema:
+# openapi-toolkit:
+# prometheus
+# postman
+# pref-editor
+# redis:
+# scrapegraph
+# sqlite
+# text-to-graphql
+# unreal-engine
+# wikipedia
+# wolfram-alpha
+# vuln nist
+# youtube transcripts
+# thingsboard
+# time:
+kicad:
+  command: "$MCP_ROOT/kicad-mcp/.venv/bin/python"
+  args:
+    - "$MCP_ROOT/kicad-mcp/main.py"
+surrealdb:
+  command: "npx"
+  args:
+    - "-y"
+    - "surrealdb-mcp-server"
+  env:
+    - "SURREALDB_URL=op://Developer/surrealdb/websocket" # ws://127.0.0.1:8000
+    - "SURREALDB_NS=op://Developer/surrealdb/claude-desktop/namespace"
+    - "SURREALDB_DB=op://Developer/surrealdb/claude-desktop/db"
+    - "SURREALDB_USER=op://Developer/surrealdb/claude-desktop/user"
+    - "SURREALDB_PASS=op://Developer/surrealdb/claude-desktop/password"
+  disabled: false
+  autoApprove: []
+docling:
+  command: "uvx"
+  args:
+    - "--from=docling-mcp"
+    - "docling-mcp-server"
+sketch:
+  transport:
+    type: http
+    url: http://localhost:31126/mcp
+freecad:
+  command: "python3"
+  args:
+    - "$HOME/Library/Preferences/FreeCAD/Mod/freecad_mcp/src/freecad_bridge.py"
+sentry:
+  transport:
+    type: http
+    url: https://mcp.sentry.dev/mcp
+slack:
+  command: npx
+  args:
+    - "-y"
+    - "@modelcontextprotocol/server-slack"
+  env:
+    - SLACK_BOT_TOKEN=xoxb-your-bot-token
+    - SLACK_TEAM_ID=YOUR_TEAM_ID
+docker:
+  command: docker
+  args:
+    - mcp
+    - gateway
+    - run
+# firecrawl:
+context7:
+  command: docker
+  args:
+    - run
+    - -i
+    - --rm
+    - mcp/context7
+# sequential-thinking:
+node:
+  command: docker
+  args:
+    - run
+    - -i
+    - --rm
+    - -v
+    - /var/run/docker.sock:/var/run/docker.sock
+    - -v
+    - /Users/YOUR_USERNAME/Desktop/sandbox-output:/root
+    - mcp/node-code-sandbox
+  env:
+    - FILES_DIR=root
+    - SANDBOX_MEMORY_LIMIT=512m
+    - SANDBOX_CPU_LIMIT=0.75
+supabase:
+  command: npx
+  args:
+    - "-y"
+    - "@modelcontextprotocol/server-supabase"
+  env:
+    - SUPABASE_URL=https://your-project-id.supabase.co
+    - SUPABASE_ANON_KEY=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlvdXItcHJvamVjdC1pZCIsInJvbGUiOiJhbm9uIiwiaWF0IjoxNjc3NTU2ODAwLCJleHAiOjE5OTMxMzI4MDB9.your-signature-here
+brave-search:
+  command: npx
+  args:
+    - "-y"
+    - "@modelcontextprotocol/server-brave-search"
+  env:
+    - BRAVE_API_KEY=BSA_xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+gitlab:
+  transport:
+    type: http
+    url: https://gitlab.com/api/v4/mcp
+  command: npx
+  args:
+    - -y
+    - mcp-remote
+    - https://gitlab.com/api/v4/mcp
+
+    - --static-oauth-client-metadata
+    - '{ "scope": "mcp" }'
+github:
+  # command: docker
+  # args:
+  #   - "run"
+  #   - "-i"
+  #   - "--rm"
+  #   - "-e"
+  #   - "GITHUB_PERSONAL_ACCESS_TOKEN"
+  #   - "ghcr.io/github/github-mcp-server"
+  # command: github-mcp-server
+  # args:
+  #   - "stdio
+  repo: https://api.githubcopilot.com/mcp/
+  command: npx
+  transport:
+    type: http
+    url: https://api.githubcopilot.com/mcp
+  headers:
+    Authorization: "Bearer YOUR_GITHUB_PAT"
+  args:
+    - "-y"
+    - "@modelcontextprotocol/server-github"
+  env:
+    - GITHUB_PERSONAL_ACCESS_TOKEN=your-token
+    - DEBUG=mcp:*
+postgres:
+  command: npx
+  args:
+    - "-y"
+    - "@modelcontextprotocol/server-postgres"
+  env:
+    - POSTGRES_CONNECTION_STRING=postgresql://user:password@localhost:5432/dbname
+filesystem:
+  command: npx
+  args:
+    - "-y"
+    - "@modelcontextprotocol/server-filesystem"
+    - "/allowed/path"
+hugging-face:
+  # repo: https://github.com/huggingface/hf-mcp-server
+  command: "npx"
+  headers:
+    Authorization: "Bearer op://Developer/psddv34n2utcr2fudt4qovvk6q/credential"
+  args:
+    - -y
+    - mcp-remote
+    - https://huggingface.co/mcp?login
+  transport:
+    type: http
+    url: https://huggingface.co/mcp?login
+atlassian:
+  command: npx
+  args:
+    - -y
+    - mcp-remote
+    - https://mcp.atlassian.com/v1/sse
+  transport:
+    type: sse
+    url: https://mcp.atlassian.com/v1/sse
+asana:
+  transport:
+    type: sse
+    url: https://mcp.asana.com/sse
+notion:
+  transport:
+    type: http
+    url: https://mcp.notion.com/mcp
+monday:
+  transport:
+    type: http
+    url: https://mcp.monday.com/mcp
+daloopa:
+  transport:
+    type: http
+    url: https://mcp.daloopa.com/server/mcp
+hubspot:
+  transport:
+    type: http
+    url: https://mcp.hubspot.com/anthropic
+airtable:
+  env:
+    - "AIRTABLE_API_KEY=YOUR_KEY"
+  command: "npx"
+  args:
+    - "-y"
+    - "airtable-mcp-server"
+  transport:
+    type: stdio
+canva:
+  transport:
+    type: http
+    url: https://mcp.canva.com/mcp
+# rust-docs: # https://github.com/Govcraft/rust-docs-mcp-server
+# crate-docs: # https://github.com/promptexecution/cratedocs-mcp
+# gitlab-jirea: # https://github.com/HainanZhao/mcp-gitlab-jira
+# postmancer: https://github.com/hijaz/postmancer
+# gopls: https://github.com/hloiseaufcms/mcp-gopls
+# bruno: https://github.com/hungthai1401/bruno-mcp
+just: # https://github.com/promptexecution/just-mcp
+  command: just-mcp
+  args:
+    - --watch-dir
+    - $HOME/repos/
+    - --watch-dir
+    - $HOME/.config/
+  transport:
+    type: stdio
+# ios-sim: https://github.com/InditexTech/mcp-server-simulator-ios-idb
+# ios-sim: https://github.com/joshuayoes/ios-simulator-mcp
+# ios-sim: https://github.com/JoshuaRileyDev/simulator-mcp-server
+# mcp-lsp: https://github.com/isaacphi/mcp-language-server
+# sql-analyzer: https://github.com/j4c0bs/mcp-server-sql-analyzer
+# csv: https://github.com/JordanDalton/RestCsvMcpServer
+# ios-appstore: https://github.com/JoshuaRileyDev/app-store-connect-mcp-server
+# open-api-schema: https://github.com/kadykov/mcp-openapi-schema-explorer
+# open-api: https://github.com/ReAPI-com/mcp-openapi
+# open-api-swagger: https://github.com/zaizaizhao/mcp-swagger-server
+# langfuse: https://github.com/langfuse/mcp-server-langfuse
+# nvim: https://github.com/linw1995/nvim-mcp
+# ros: https://github.com/lpigeon/ros-mcp-server
+# ros: https://github.com/wise-vision/mcp_server_ros_2
+# ros: https://github.com/Yutarop/ros-mcp
+# feedback: https://github.com/mrexodia/user-feedback-mcp
+# editorconfig: https://github.com/neilberkman/editorconfig_mcp
+# token-optimizer: https://github.com/ooples/token-optimizer-mcp
+# macos-mon: https://github.com/Pratyay/mac-monitor-mcp
+# website-downloader: https://github.com/pskill9/website-downloader
+# xcode: https://github.com/r-huijts/xcode-mcp-server
+# xcode: https://github.com/ShenghaiWang/xcodebuild
+# lldb: https://github.com/stass/lldb-mcp
+# ui: https://github.com/storybookjs/addon-mcp
+# nixos: https://github.com/utensils/mcp-nixos
+# prompt-engine: https://github.com/vasayxtx/mcp-prompt-engine
+# pandoc: https://github.com/vivekVells/mcp-pandoc
+# go-pkg-docs: https://github.com/yikakia/godoc-mcp-server
+# mindmap: https://github.com/YuChenSSR/mindmap-mcp-server
+# typescript: https://github.com/yWorks/mcp-typescribe
+# fetch: https://github.com/zcaceres/fetch-mcp
+# zenml: https://github.com/zenml-io/mcp-zenml
+# calculator: https://github.com/avisangle/calculator-server
+# kaggle: https://github.com/arrismo/kaggle-mcp
+# data-quality: https://github.com/DataEval/dingo
+# jupyter: https://github.com/datalayer/jupyter-mcp-server
+# jupyter: https://github.com/jjsantos01/jupyter-notebook-mcp
+# data-analysis: https://github.com/kdqed/zaturn
+# data-visualization: https://github.com/mckinsey/vizro/tree/main/vizro-mcp
+# R: https://github.com/phisanti/MCPR
+# data-exploration: https://github.com/reading-plus-ai/mcp-server-data-exploration
+# graph-data: https://github.com/Bright-L01/networkx-mcp-server
+# esp: https://github.com/horw/esp-mcp
+# modbus: https://github.com/kukapay/modbus-mcp
+# gnuradio: https://github.com/yoelbassin/gnuradioMCP
+# OPC UA: https://github.com/kukapay/opcua-mcp
+# file-tree: https://github.com/8b-is/smart-tree
+# summarizer: https://github.com/0xshellming/mcp-summarizer
+# rag: https://github.com/apecloud/ApeRAG
+# openzim: https://github.com/cameronrye/openzim-mcp
+# memory: https://github.com/CheMiguel23/MemoryMesh
+# zettelkasten: https://github.com/entanglr/zettelkasten-mcp
+# rag-docs: https://github.com/hannesrudolph/mcp-ragdocs
+# mindmap: https://github.com/jinzcdev/markmap-mcp-server
+# memory: https://github.com/modelcontextprotocol/servers/tree/main/src/memory
+# memory: https://github.com/pi22by7/In-Memoria
+# rag: https://github.com/shinpr/mcp-local-rag
+# memory: https://github.com/topoteretes/cognee/tree/dev/cognee-mcp
+# memory: https://github.com/JamesANZ/cross-llm-mcp
+# grafana: https://github.com/grafana/mcp-grafana
+# sentry: https://github.com/getsentry/sentry-mcp
+# grafana: https://github.com/tumf/grafana-loki-mcp
+# gif: https://github.com/ananddtyagi/gif-creator-mcp/tree/main
+# exif: https://github.com/stass/exif-mcp
+# ffmpeg: https://github.com/video-creator/ffmpeg-mcp.git
+# ghidra: https://github.com/13bm/GhidraMCP
+# ghidra: https://github.com/jtang613/GhidrAssistMCP
+# ghidra: https://github.com/LaurieWired/GhidraMCP
+# ida: https://github.com/mrexodia/ida-pro-mcp
+# cyberchef: https://github.com/slouchd/cyberchef-api-mcp-server
+# ai-sec: https://github.com/AIM-Intelligence/AIM-MCP
+# 1password: https://github.com/dkvdm/onepassword-mcp-server
+# jira: https://github.com/tom28881/mcp-jira-server
+# jira: https://github.com/nguyenvanduocit/jira-mcp
+# plantuml: https://github.com/2niuhe/plantuml_web
+# graphql: https://github.com/blurrah/mcp-graphql
+# graphql: https://github.com/fotoetienne/gqai
+# obsidian: https://github.com/calclavia/mcp-obsidianhttps://github.com/blurrah/mcp-graphql
+# ypst: https://github.com/johannesbrandenburger/typst-mcp
+# jira: https://github.com/KS-GEN-AI/jira-mcp-server
+# obsidian: https://github.com/MarkusPfundstein/mcp-obsidian
+# gif: https://github.com/magarcia/mcp-server-giphy
+# godoc: https://github.com/mrjoshuak/godoc-mcp
+# thinking: https://github.com/Rai220/think-mcp
+# remember: https://github.com/rember/rember-mcp
+# apple-notes: https://github.com/sirmews/apple-notes-mcp
+# graphql: https://github.com/UnitVectorY-Labs/mcp-graphql-forge
+# dbt: https://github.com/dbt-labs/dbt-mcp
+# dbt-docs: https://github.com/mattijsdp/dbt-docs-mcp
+# mindmap: https://github.com/abrinsmead/mindpilot-mcp
+# jira: https://github.com/aashari/mcp-server-atlassian-jira
+# deps: https://github.com/admica/FileScopeMCP
+# char-index: https://github.com/agent-hanju/char-index-mcp
+# ios-sim: https://github.com/ambar/simctl-mcp
+# webhooks: https://github.com/alimo7amed93/webhook-tester-mcp
+# package-registry: https://github.com/artmann/package-registry-mcp
+# react: https://github.com/azer/react-analyzer-mcp
+# postman: https://github.com/delano/postman-mcp-server
+# docker-hub: https://github.com/docker/hub-mcp
+# uui: https://github.com/etsd-tech/mcp-pointer
+# ui: https://github.com/freema/mcp-design-system-extractor
+# diff: https://github.com/gorosun/unified-diff-mcp
+# mermaid: https://github.com/hustcc/mcp-mermaid
+# antv: https://github.com/antvis/mcp-server-chart
+# multi-agent: https://github.com/rinadelph/Agent-MCP
+# ast: https://github.com/micl2e2/code-to-tree
+# rubberduck: https://github.com/nesquikm/mcp-rubber-duck
+# books: https://github.com/VmLia/books-mcp-server
+# cert-mgr: https://github.com/pibblokto/cert-manager-mcp-server
+# apple-reminders: https://github.com/FradSer/mcp-server-apple-reminders
+# mermaid: https://github.com/Narasimhaponnada/mermaid-mcp
+# manim: https://github.com/abhiemj/manim-mcp-server
+# books: https://github.com/8enSmith/mcp-open-library
+#

@@ -1,0 +1,173 @@
+import "./mcp.just"
+
+free_cad_mods_dir := env("HOME") + "/Library/Preferences/FreeCAD/Mod"
+
+kicad: (config-all-ai-tools "kicad")
+    #!/usr/bin/env bash
+    brew install uv
+    cd "{{ mcp_root }}"
+    # git clone https://github.com/lamaalrajih/kicad-mcp.git
+    cd kicad-mcp
+    # Install dependencies – `uv` will create a `.venv/` folder automatically
+    # (Install `uv` first: `brew install uv` on macOS or `pipx install uv`)
+    make install
+    # Optional: activate the environment for manual commands
+    source .venv/bin/activate
+    # Edit the .env file
+    echo "" > .env
+    # Add paths to your KiCad projects (comma-separated)
+    echo "KICAD_APP_PATH=/Applications/KiCad/KiCad.app" >> .env
+    echo "KICAD_SEARCH_PATHS=~/repos/hardware" >> .env
+    echo "KICAD_USER_DIR=~/Documents/KiCad" >> .env
+    # python main.py
+
+kicad-alt:
+    #!/usr/bin/env bash
+    # Install Node.js
+    brew install node@20
+    # Clone and build
+    cd "{{ just_dir }}"
+    git clone https://github.com/mixelpixx/KiCAD-MCP-Server.git "kicad-mcp-alt"
+    cd KiCAD-MCP-Server
+    npm install
+    pip3 install -r requirements.txt
+    npm run build
+
+surrealdb:
+    #!/usr/bin/env bash
+    echo "TODO"
+
+docling: (pyenv "3.12" "docling")
+    #!/usr/bin/env bash
+    brew install tesseract leptonica pkg-config
+    cd "{{ mcp_root }}/docling"
+    python3 -m pip install --upgrade pip
+    python3 -m pip install "docling[asr,vlm,easyocr,tesserocr,ocrmac,rapidocr]" --extra-index-url https://download.pytorch.org/whl/cpu
+    just config-all-ai-tools "docling"
+
+pyenv ver local:
+    #!/usr/bin/env bash
+    brew install pyenv
+    if ![[ pyenv "local" | grep -o "{{ ver }}" ]]; then
+        mkdir -p "{{ mcp_root }}/docling"
+        cd "{{ mcp_root }}/{{ local }}"
+        pyenv install "{{ ver }}"
+        pyenv local "{{ ver }}"
+    fi
+
+freecad:
+    #!/usr/bin/env bash
+    brew install freecad
+    mkdir -p "{{ free_cad_mods_dir }}"
+    cd "{{ free_cad_mods_dir }}"
+    git clone https://github.com/bonninr/freecad_mcp.git "freecad-mcp"
+
+gitlab-ci-local:
+    #!/usr/bin/env bash
+    volta install gitlab-ci-local
+    echo "TODO"
+
+github:
+    #!/usr/bin/env bash
+    echo "TODO"
+
+gitlab:
+    #!/usr/bin/env bash
+    echo "TODO"
+
+gitea:
+    #!/usr/bin/env bash
+    echo "TODO"
+
+bitbucket:
+    #!/usr/bin/env bash
+    echo "TODO"
+
+jira: (claude-desktop "jira") (zed "jira") (claude-code "jira")
+    #!/usr/bin/env bash
+    echo "TODO"
+
+confluence:
+    #!/usr/bin/env bash
+    echo "TODO"
+
+node:
+    #!/usr/bin/env bash
+    echo "TODO"
+    # https://github.com/workbackai/mcp-nodejs-debugger
+
+cloudflare:
+    #!/usr/bin/env bash
+    echo "TODO"
+    # https://github.com/cloudflare/mcp-server-cloudflare
+
+css:
+    #!/usr/bin/env bash
+    echo "TODO"
+    # https://github.com/stolinski/css-mcp
+
+mongo:
+    #!/usr/bin/env bash
+    echo "TODO"
+    # https://github.com/mongodb-js/mongodb-mcp-server
+
+claude-gemini:
+    #!/usr/bin/env bash
+    echo "TODO"
+    # https://github.com/BeehiveInnovations/gemini-mcp-server
+
+unity:
+    #!/usr/bin/env bash
+    echo "TODO"
+    # https://github.com/justinpbarnett/unity-mcp
+
+playwright:
+    #!/usr/bin/env bash
+    echo "TODO"
+    # https://github.com/microsoft/playwright-mcp
+
+fastapi:
+    #!/usr/bin/env bash
+    echo "TODO"
+    # https://github.com/tiangolo/fastapi
+    # https://github.com/tadata-org/fastapi_mcp
+
+task-master:
+    #!/usr/bin/env bash
+    echo "TODO"
+    # https://github.com/eyaltoledano/claude-task-master
+
+apple-notes:
+    #!/usr/bin/env bash
+    echo "TODO"
+    # https://github.com/krasun/notes-mcp
+
+apple: apple-notes
+    #!/usr/bin/env bash
+    echo "TODO"
+
+sketch:
+    #!/usr/bin/env bash
+    if [ -d /Applications/Sketch.app ]; then
+        # defaults write com.bohemiancoding.sketch3 mcpServerPortNumber -int 31126
+        just claude-code sketch
+        just claude-desktop sketch
+        # docker mcp server enable sketch
+    else
+        echo "Sketch.app not found"
+    fi
+    # https://github.com/justinpbarnett/sketch-mcp
+
+docker:
+    #!/usr/bin/env bash
+    echo "TODO"
+    docker mcp secret set GITHUB.PERSONAL_ACCESS_TOKEN=github_pat_YOUR_TOKEN_HERE
+    docker compose up -d
+
+just:
+    #!/usr/bin/env bash
+    echo "TODO"
+    cargo install cargo-binstall
+    cargo binstall --git https://github.com/toolprint/just-mcp just-mcp
+    just claude-code just
+    just claude-desktop just

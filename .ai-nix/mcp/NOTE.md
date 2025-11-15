@@ -1,0 +1,27 @@
+- Windows Native API Programming
+  - MSRP: $380 or 4 × $100
+  - BF25: $228 or 4 × $60
+- Advanced Windows Kernel Programming
+  - MSRP: $270 or 3 × $95
+  - BF25: $162 or 3 × $57
+- Hardware Hacking Expert – Level 2: Module 01 – UART Hacking
+  - MSRP: $250
+  - BF25: $150
+- EDR Internals – Research & Development (Live)
+- Offensive Phishing Operations Course
+  - MSRP: $499
+- Ransomware Internals, Simulation and Detection Course
+  - MSRP: ? (Need approval to see)
+
+---
+
+- Oscilliscope (Simple)
+  - https://www.amazon.com/FNIRSI-DPOS350P-Oscilloscope-Spectrum-Analyzer/dp/B0F6C96GWW/
+- Logic Analyzer (Simple)
+- multimeter
+- adaptors for RS485/422
+- probing tools
+  - for industrial harnesses
+- jtagulator
+- Bus Pirate
+- fault injection tools / glitchers

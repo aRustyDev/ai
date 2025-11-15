@@ -1,0 +1,37 @@
+Error Code 	Meaning
+
+[[error.400]]
+message = "Bad Request"
+meaning = "Your request sucks"
+
+[[error.401]]
+message = "Unauthorized"
+meaning = "Your API key is wrong"
+
+[[error.403]]
+message = "Forbidden"
+meaning = "You do not have permission to access the requested resource"
+
+[[error.404]]
+message = "Not Found"
+meaning = "The specified resource could not be found"
+
+[[error.405]]
+message = "Method Not Allowed"
+meaning = "You tried to access an endpoint with an invalid method"
+
+[[error.422]]
+message = "Validation Error"
+meaning = "The given data was invalid"
+
+[[error.429]]
+message = "Too Many Requests"
+meaning = "You're sending too many requests or have reached your limit for new aliases"
+
+[[error.500]]
+message = "Internal Server Error"
+meaning = "We had a problem with our server. Try again later"
+
+[[error.503]]
+message = "Service Unavailable"
+meaning = "We're temporarially offline for maintanance. Please try again later"

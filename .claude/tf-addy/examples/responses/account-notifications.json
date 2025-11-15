@@ -1,0 +1,9 @@
+{
+    "id": "a83b1763-7a63-4306-93cd-3b2e051db704",
+    "category": "Announcement",
+    "title": "Notification title",
+    "text": "Notification text",
+    "link": "https://addy.io/",
+    "link_text": "Read More",
+    "created_at": "2019-10-01 09:00:00"
+}

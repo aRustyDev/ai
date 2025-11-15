@@ -1,0 +1,212 @@
+# Justfile for tree-sitter-dotenv and zed-env development
+
+# Default recipe - show available commands
+default:
+    @just --list
+
+# Clean all generated files and build artifacts
+clean:
+    @echo "Cleaning tree-sitter-dotenv..."
+    cd ../tree-sitter-dotenv && rm -rf build node_modules src/parser.c src/tree_sitter binding.gyp compile_commands.json package-lock.json
+    cd ../tree-sitter-dotenv && rm -f tree-sitter-env.wasm *.log test.env test-*.env
+    @echo "Cleaning zed-env..."
+    cd ../zed-env && rm -rf node_modules grammars/*.wasm
+    @echo "Cleaning temporary test files..."
+    # Fixtures are version controlled, not cleaned
+    @echo "Clean complete!"
+
+# Install dependencies
+install:
+    @echo "Installing tree-sitter-dotenv dependencies..."
+    cd ../tree-sitter-dotenv && npm install
+    @echo "Dependencies installed!"
+
+# Generate parser from grammar
+generate:
+    @echo "Generating parser..."
+    cd ../tree-sitter-dotenv && npx tree-sitter generate
+    @echo "Parser generated!"
+
+# Build WASM for Zed
+build-wasm:
+    @echo "Building WASM..."
+    cd ../tree-sitter-dotenv && npx tree-sitter build --wasm
+    @echo "WASM built!"
+
+# Run tests
+test:
+    @echo "Running tree-sitter tests..."
+    cd ../tree-sitter-dotenv && npx tree-sitter test
+    @echo "Tests complete!"
+
+# Parse a test file (usage: just parse FILE=test.env)
+parse FILE="test.env":
+    cd ../tree-sitter-dotenv && npx tree-sitter parse {{FILE}}
+
+# Update zed-env with latest tree-sitter-dotenv commit
+sync-extension:
+    #!/usr/bin/env bash
+    set -euo pipefail
+    echo "Getting latest commit from tree-sitter-dotenv..."
+    cd ../tree-sitter-dotenv
+    COMMIT=$(git rev-parse HEAD)
+    echo "Latest commit: $COMMIT"
+    cd ../../zed-env
+    echo "Updating extension.toml..."
+    if [[ "$OSTYPE" == "darwin"* ]]; then
+        sed -i '' "s/commit = \".*\"/commit = \"$COMMIT\"/" extension.toml
+    else
+        sed -i "s/commit = \".*\"/commit = \"$COMMIT\"/" extension.toml
+    fi
+    echo "Copying WASM file..."
+    cp ../tree-sitter-dotenv/tree-sitter-env.wasm grammars/env.wasm || echo "WASM not found - run 'just build-wasm' first"
+    echo "Sync complete!"
+
+# Full build pipeline
+build: generate build-wasm test sync-extension
+    @echo "Full build complete!"
+
+# Install Zed extension for development
+install-extension:
+    @echo "Installing Zed extension..."
+    cd ../zed-env && zed --install-dev-extension .
+    @echo "Extension installed!"
+
+# Create a new git branch for development
+new-branch NAME:
+    git checkout -b {{NAME}}
+    @echo "Created and switched to branch: {{NAME}}"
+
+# Commit with a descriptive message
+commit MESSAGE:
+    git add -A
+    git commit -m "{{MESSAGE}}"
+    @echo "Committed: {{MESSAGE}}"
+
+# Show current parser output for a test case
+debug-parse TEST="key=value":
+    @echo "Parsing: {{TEST}}"
+    cd ../tree-sitter-dotenv && echo "{{TEST}}" | npx tree-sitter parse -
+
+# Run all .npmrc test files through parser
+test-npmrc:
+    @echo "Testing all .npmrc files..."
+    @for file in tests/tree-sitter/kvconf/fixtures/test-*.npmrc; do \
+        echo "\n=== Testing $$file ==="; \
+        just parse "$$file"; \
+    done
+
+# Create checkpoint tag
+checkpoint VERSION:
+    git add -A
+    git commit -m "checkpoint: {{VERSION}}" || true
+    git tag -a "checkpoint-{{VERSION}}" -m "Checkpoint {{VERSION}}"
+    @echo "Created checkpoint: {{VERSION}}"
+
+# Rollback to checkpoint
+rollback VERSION:
+    git checkout "checkpoint-{{VERSION}}"
+    @echo "Rolled back to checkpoint: {{VERSION}}"
+
+# Show all checkpoints
+checkpoints:
+    @echo "Available checkpoints:"
+    @git tag -l "checkpoint-*" | sort -V
+
+# Validate grammar syntax
+validate-grammar:
+    @echo "Validating grammar syntax..."
+    cd ../tree-sitter-dotenv && node -c grammar.js
+    @echo "Grammar syntax is valid!"
+
+# Validate all test fixtures
+validate-fixtures:
+    @echo "Validating test fixtures..."
+    cd ../tree-sitter-dotenv && node test/validate-fixtures.js
+
+# Generate regression test baselines
+regression-baseline:
+    @echo "Generating regression baselines..."
+    cd ../tree-sitter-dotenv && node test/regression-test.js baseline
+
+# Run regression tests
+regression-test:
+    @echo "Running regression tests..."
+    cd ../tree-sitter-dotenv && node test/regression-test.js test
+
+# Run specific test category
+test-corpus CATEGORY:
+    @echo "Running corpus tests for {{CATEGORY}}..."
+    cd ../tree-sitter-dotenv && npx tree-sitter test -f {{CATEGORY}}
+
+# Run string parsing performance benchmark
+benchmark-strings:
+    @echo "Running string parsing benchmarks..."
+    cd ../tree-sitter-dotenv && node --expose-gc test/benchmark-strings.js
+
+# Check for changes in feedback files since last check
+check-feedback PROJECT="tree-sitter/kvconf":
+    #!/usr/bin/env bash
+    set -euo pipefail
+    FEEDBACK_DIR=".claude/feedback/{{PROJECT}}"
+    CHECKSUM_FILE="$FEEDBACK_DIR/.last-check.sha"
+    
+    if [ ! -d "$FEEDBACK_DIR" ]; then
+        echo "❌ Feedback directory not found: $FEEDBACK_DIR"
+        exit 1
+    fi
+    
+    # Calculate current checksum
+    CURRENT_SHA=$(find "$FEEDBACK_DIR" -name "*.md" -type f -exec shasum {} \; | sort | shasum | cut -d' ' -f1)
+    
+    # Check if checksum file exists
+    if [ ! -f "$CHECKSUM_FILE" ]; then
+        echo "🆕 First time checking feedback files"
+        echo "$CURRENT_SHA" > "$CHECKSUM_FILE"
+        echo "✅ Checksum saved for future comparisons"
+        find "$FEEDBACK_DIR" -name "*.md" -type f -exec echo "  - {}" \;
+        exit 0
+    fi
+    
+    # Compare with last checksum
+    LAST_SHA=$(cat "$CHECKSUM_FILE")
+    
+    if [ "$CURRENT_SHA" = "$LAST_SHA" ]; then
+        echo "✅ No changes in feedback files since last check"
+    else
+        echo "📝 Changes detected in feedback files!"
+        echo "Previous checksum: $LAST_SHA"
+        echo "Current checksum:  $CURRENT_SHA"
+        echo ""
+        echo "Modified files:"
+        
+        # Show which files changed
+        for file in $(find "$FEEDBACK_DIR" -name "*.md" -type f); do
+            if [ -f "$file.last" ]; then
+                if ! diff -q "$file" "$file.last" > /dev/null 2>&1; then
+                    echo "  📝 $file"
+                fi
+            else
+                echo "  🆕 $file"
+            fi
+        done
+        
+        # Update checksum
+        echo "$CURRENT_SHA" > "$CHECKSUM_FILE"
+        
+        # Create backups for next comparison
+        find "$FEEDBACK_DIR" -name "*.md" -type f -exec cp {} {}.last \;
+        
+        echo ""
+        echo "💡 Review the changed files before proceeding with work"
+    fi
+
+# Run behavior tests (to be implemented)
+test-behavior:
+    @echo "Running behavior tests..."
+    cd ../tree-sitter-dotenv && npm test
+    @echo "Behavior tests complete!"
+
+# Full development cycle
+dev: clean install generate build-wasm test sync-extension install-extension
+    @echo "Development cycle complete!"

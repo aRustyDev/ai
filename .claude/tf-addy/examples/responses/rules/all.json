@@ -1,0 +1,60 @@
+{
+    "data": [
+        {
+            "id": "50c9e585-e7f5-41c4-9016-9014c15454bc",
+            "user_id": "ca0a4e09-c266-4f6f-845c-958db5090f09",
+            "name": "First Rule",
+            "order": 0,
+            "conditions": [
+                {
+                    "type": "sender",
+                    "match": "is not",
+                    "values": ["will@anonaddy.com"]
+                }
+            ],
+            "actions": [
+                {
+                    "type": "subject",
+                    "value": "New Subject"
+                }
+            ],
+            "operator": "AND",
+            "forwards": true,
+            "replies": false,
+            "sends": false,
+            "active": true,
+            "applied": 5,
+            "last_applied": "2019-10-01 09:00:00",
+            "created_at": "2019-10-01 09:00:00",
+            "updated_at": "2019-10-01 09:00:00"
+        },
+        {
+            "id": "c549db7d-5fac-4b09-9443-9e47f644d29f",
+            "user_id": "ca0a4e09-c266-4f6f-845c-958db5090f09",
+            "name": "Second Rule",
+            "order": 0,
+            "conditions": [
+                {
+                    "type": "sender",
+                    "match": "is exactly",
+                    "values": ["will@anonaddy.com"]
+                }
+            ],
+            "actions": [
+                {
+                    "type": "subject",
+                    "value": "Another Subject"
+                }
+            ],
+            "operator": "OR",
+            "forwards": true,
+            "replies": false,
+            "sends": false,
+            "active": true,
+            "applied": 3,
+            "last_applied": "2019-10-01 09:00:00",
+            "created_at": "2019-10-01 09:00:00",
+            "updated_at": "2019-10-01 09:00:00"
+        }
+    ]
+}
