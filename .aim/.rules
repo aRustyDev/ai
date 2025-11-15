@@ -1,4 +1,0 @@
-# .aim/ development rules
-
-- `.aim/roles/` : contains roles to assume while working on a document.
-- `.aim/specialties/` : contains highly specialized knowledge and instructions to use while working on a document.

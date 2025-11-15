@@ -74,3 +74,8 @@ Follow these steps for each interaction:
      a) Create entities for recurring organizations, people, and significant events
      b) Connect them to the current entities using relations
      b) Store facts about them as observations
+
+# .aim/ development rules
+
+- `.aim/roles/` : contains roles to assume while working on a document.
+- `.aim/specialties/` : contains highly specialized knowledge and instructions to use while working on a document.
