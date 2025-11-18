@@ -54,7 +54,52 @@
     "ami_eks-just": {
       "source": "custom",
       "command": "just-mcp",
-      "args": ["--watch-dir", "/Users/adamsm/code/images/ami-eks","--watch-dir", "/Users/adamsm/code/images/ami-eks/scripts/just"]
+      "args": [
+        "--watch-dir",
+        "/Users/adamsm/code/images/ami-eks",
+        "--watch-dir",
+        "/Users/adamsm/code/images/ami-eks/scripts/just"
+      ]
     }
+    // "schemacrawler-ai": {
+    //   "command": "docker",
+    //   "args": [
+    //     "run",
+    //     "-i",
+    //     "--rm",
+    //     "-e",
+    //     "SCHCRWLR_JDBC_URL",
+    //     "-e",
+    //     "SCHCRWLR_SERVER",
+    //     "-e",
+    //     "SCHCRWLR_HOST",
+    //     "-e",
+    //     "SCHCRWLR_PORT",
+    //     "-e",
+    //     "SCHCRWLR_DATABASE",
+    //     "-e",
+    //     "SCHCRWLR_INFO_LEVEL",
+    //     "-e",
+    //     "SCHCRWLR_LOG_LEVEL",
+    //     "-e",
+    //     "SCHCRWLR_DATABASE_USER",
+    //     "-e",
+    //     "SCHCRWLR_DATABASE_PASSWORD",
+    //     "-v",
+    //     "/local-directory:/local-directory",
+    //     "mcp/schemacrawler-ai"
+    //   ],
+    //   "env": {
+    //     "SCHCRWLR_JDBC_URL": "12.12.12.12",
+    //     "SCHCRWLR_SERVER": "12.12.12.12",
+    //     "SCHCRWLR_HOST": "12.12.12.12",
+    //     "SCHCRWLR_PORT": "9999",
+    //     "SCHCRWLR_DATABASE": "public",
+    //     "SCHCRWLR_INFO_LEVEL": "standard",
+    //     "SCHCRWLR_LOG_LEVEL": "ALL",
+    //     "SCHCRWLR_DATABASE_USER": "SA",
+    //     "SCHCRWLR_DATABASE_PASSWORD": "super_S3cret"
+    //   }
+    // }
   }
 }

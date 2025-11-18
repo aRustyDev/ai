@@ -6,7 +6,7 @@
   },
   "routes": [
     {
-      "pattern": "ctx.arusty.dev",
+      "pattern": "ai.arusty.dev",
       "custom_domain": true,
     },
   ],
